@@ -7,19 +7,20 @@ import yahoofinance.histquotes.HistoricalQuote;
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.util.List;
-
-public class MarketInfoRetriever {
+//Will retrieve data for a single stock
+public class stockInfoRetriever {
     //Use YahooFinance API to retrieve real time market data
     private final String ticker;
     private Stock stock;
 
-    public MarketInfoRetriever(String symbol) throws IOException {
+    public stockInfoRetriever(String symbol) throws IOException {
         //Constructor - will instantiate with the symbol of the stock and then will use the API to retrieve stock info
         ticker = symbol;
         stock = YahooFinance.get(symbol);
     }
 
     public String returnTicker(){
+
         return ticker;
     }
 
@@ -56,7 +57,7 @@ public class MarketInfoRetriever {
 
 
     public static void main(String[] args) throws IOException {
-        MarketInfoRetriever retriever = new MarketInfoRetriever("INTC");
+        stockInfoRetriever retriever = new stockInfoRetriever("INTC");
 
         System.out.println(retriever.returnTicker());
         System.out.println(retriever.returnPrice());
