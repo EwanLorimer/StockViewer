@@ -5,5 +5,7 @@ User can change timeframe for historic prices (e.g. 1 month, 3 months, 1 year or
 User can have a profile with saved stocks
 Display stock info such as dividend yield (and percentage), P/E, exchange listed on,
 
+Multiple user accounts
 Secondary Objectives:
 Provide data for other indicators such as RSI
+
