@@ -2,8 +2,10 @@ Primary objectives:
 
 User can search for a stock ticker, retrieve current price as well as graph historic prices
 User can change timeframe for historic prices (e.g. 1 month, 3 months, 1 year or even between 2 dates)
-User can have a profile with saved stocks
-Display stock info such as dividend, P/E
+User can have a profile with saved stocks and a portfolio
+Display stock info such as dividend yield (and percentage), P/E, exchange listed on,
 
+Multiple user accounts
 Secondary Objectives:
 Provide data for other indicators such as RSI
+
