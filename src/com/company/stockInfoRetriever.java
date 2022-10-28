@@ -24,25 +24,29 @@ public class stockInfoRetriever {
         return ticker;
     }
 
-    public BigDecimal returnPrice() throws IOException {
+    public String returnPrice() throws IOException {
 
         BigDecimal price = stock.getQuote().getPrice();
-        return price;
+        String output = price.toString();
+        return output;
     }
 
-    public BigDecimal returnDividendYield() throws IOException{
+    public String returnDividendYield() throws IOException{
         BigDecimal dividendYield = stock.getDividend().getAnnualYield();
-        return dividendYield;
+        String output = dividendYield.toString();
+        return output;
     }
 
-    public BigDecimal returnDividendYieldPercentage() throws IOException{
-        BigDecimal dividendYieldPercentage = stock.getDividend().getAnnualYieldPercent();
+    public String returnDividendYieldPercentage() throws IOException{
+        BigDecimal dividendYield = stock.getDividend().getAnnualYieldPercent();
+        String dividendYieldPercentage = dividendYield.toString() + "%";
         return dividendYieldPercentage;
     }
 
-    public BigDecimal returnPERatio() throws IOException{
+    public String returnPERatio() throws IOException{
         BigDecimal PERatio = stock.getStats().getPe();
-        return PERatio;
+        String output = PERatio.toString();
+        return output;
     }
 
     public String returnStockExchange() throws IOException{
@@ -65,7 +69,7 @@ public class stockInfoRetriever {
         System.out.println(retriever.returnDividendYieldPercentage());
         System.out.println(retriever.returnPERatio());
         System.out.println(retriever.returnStockExchange());
-        System.out.println(retriever.returnHistory());
+
 
 
 

@@ -1,25 +1,20 @@
 package com.company;
 
 import javax.swing.*;
-import java.awt.*;
+import java.awt.FlowLayout;
+import java.awt.event.*;
 
-public class MarketPage{
+public class MarketPage extends GUI{
 
     public MarketPage(){
-        JFrame frame = new JFrame();
-        JPanel panel = new JPanel();
-        panel.setBorder(BorderFactory.createEmptyBorder(30, 30, 10, 30));
-        panel.setLayout(new GridLayout(0, 1));
+        GUI userInterface = new GUI();
+        this.setSize(1920, 1080);
+        this.setVisible(true);
 
-        frame.setSize(720, 576);
-        frame.add(panel, BorderLayout.CENTER);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setTitle("Stock Viewer");
-        frame.setVisible(true);
+
     }
-
-    public static void main(String[] args) {
-        MarketPage testGUI = new MarketPage();
+    @Override
+    public void actionPerformed(ActionEvent e) {
 
     }
 
