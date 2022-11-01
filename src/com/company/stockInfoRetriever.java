@@ -59,19 +59,8 @@ public class stockInfoRetriever {
         return history;
     }
 
-
     public static void main(String[] args) throws IOException {
-        stockInfoRetriever retriever = new stockInfoRetriever("INTC");
-
-        System.out.println(retriever.returnTicker());
-        System.out.println(retriever.returnPrice());
-        System.out.println(retriever.returnDividendYield());
-        System.out.println(retriever.returnDividendYieldPercentage());
-        System.out.println(retriever.returnPERatio());
-        System.out.println(retriever.returnStockExchange());
-
-
-
-
+        stockInfoRetriever retriever = new stockInfoRetriever("BABA");
     }
+
 }

@@ -12,8 +12,8 @@ public class GUI extends JFrame implements ActionListener {
     public GUI(){
         //Constructor to be used
         JMenuBar menuBar = new JMenuBar();
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setSize(1920, 1080);
+
+        this.setSize(0, 0);
         this.setLayout(new FlowLayout());
         marketMenu = new JMenuItem("Market");
         menuBar.add(marketMenu);
@@ -37,9 +37,5 @@ public class GUI extends JFrame implements ActionListener {
         else if(e.getSource() == portfolioMenu){
             portfolioPage portfolioGUI = new portfolioPage();
         }
-    }
-
-    public static void main(String[] args) {
-        GUI run = new GUI();
     }
 }
