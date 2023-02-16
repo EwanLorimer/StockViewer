@@ -1,4 +1,10 @@
 package com.company;
+/**
+ * @author Ewan Lorimer
+ * - No Copyright
+ * @version 1.0
+ *
+ */
 
 import yahoofinance.*;
 import yahoofinance.histquotes.HistoricalQuote;
@@ -13,12 +19,20 @@ public class stockInfoRetriever {
     private final String ticker;
     private Stock stock;
 
+    /**
+     * Stock info constructor, uses yahoofinance API to retrieve stock
+     * @param symbol Ticker value for the stock e.g. KO, BABA, INTL etc
+     * @throws IOException Throws IOException if stock cannot be found by API
+     */
     public stockInfoRetriever(String symbol) throws IOException {
-        //Constructor - will instantiate with the symbol of the stock and then will use the API to retrieve stock info
         ticker = symbol;
         stock = YahooFinance.get(symbol);
     }
 
+    /**
+     * Returns ticker value of the stock
+     * @return ticker
+     */
     public String returnTicker(){
 
         return ticker;
